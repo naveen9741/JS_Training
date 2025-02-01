@@ -1,0 +1,52 @@
+<form id="myForm">
+    <input type="text" id="username" placeholder="Enter your username" required>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+    const form = document.getElementById('myForm');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent the form from submitting
+  
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+  
+      if (username && password) {
+        console.log('Form submitted');
+        // You can send form data to the server here
+      } else {
+        console.log('Please fill out all fields');
+      }
+    });
+  </script>
+<input type="text" id="liveInput" placeholder="Type something...">
+
+<p>Live input value: <span id="liveValue"></span></p>
+
+<script>
+  const input = document.getElementById('liveInput');
+  const liveValue = document.getElementById('liveValue');
+
+  input.addEventListener('input', function() {
+    liveValue.textContent = input.value;  // Display live value
+  });
+</script>
+<select id="dropdown">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+  </select>
+  
+  <p>You selected: <span id="selectedValue"></span></p>
+  
+  <script>
+    const dropdown = document.getElementById('dropdown');
+    const selectedValue = document.getElementById('selectedValue');
+  
+    dropdown.addEventListener('change', function() {
+      selectedValue.textContent = dropdown.value;
+    });
+  </script>
+    

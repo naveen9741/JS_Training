@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Event Example</title>
+</head>
+<body>
+
+  <input type="text" id="username" placeholder="Enter your username">
+
+  <script>
+    window.addEventListener('load', function() {
+      console.log("The page has been loaded!");
+      
+    });
+
+    window.addEventListener("DOMContentLoaded",()=>{
+      console.log('DOM has been loaded!');
+    })
+
+    window.addEventListener('resize', myFun);
+
+    window.addEventListener('scroll', function() {
+     console.log('The page has been scrolled!');
+    });
+    window.addEventListener('mousemove', myFun);p
+
+    function myFun(e,text = 'font') {
+     console.log('The mouse has been moved!',text);
+    }
+
+
+
+  </script>
+
+</body>
+</html>
