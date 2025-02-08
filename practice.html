@@ -6,11 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="mybutton">click here</p>
+  <div id = "container" style = background-color:lightblue;>
+    <p class="Example">hello</p>
+    <p class="Example">world</p>
+    <p class="Example">enter</p>
+    <p class="Example">into new</p>
+  </div>
     <script>
-        document.getElementById("mybutton").addEventListener('click',function()
-    {alert("hello world")});
+        const node = document.querySelectorAll(".Example");
+        for(let i = 0; i < node.length; i++) {
+            node[i].addEventListener("click",function(e) {
+                let ele = e.target;
+                e.target.style.backgroundColor = "red";
+                ele.style.border = "2px solid blue";
+            })
+            const box = document.getElementById("#container");
+            box.addEventListener("mousemove",function(e) {
+                e.target.style.backgroundColor = "green";
+            })
+        }
+
+
     </script>
-    
 </body>
 </html>

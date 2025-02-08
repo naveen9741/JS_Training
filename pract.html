@@ -6,9 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="arr"></p>
+   <p>"enter a number"</p>
+   <button id="demo" >submit</button>
+   <input id="numb" type="number">
     <script>
-        document.getElementById("arr").innerHTML("hello")
+        const demoEle = document.getElementById("demo");
+        console.log(demoEle);
+        demoEle && demoEle.addEventListener("click",function() {
+            let inputNumber = document.querySelector("#numb");
+            let inputData = inputNumber.value;
+            if (inputData) {
+                if(inputData < 0 || inputData > 10) {
+                    console.log("invalid number");
+                } else {
+                    console.log("number is valid");
+                }
+            }
+        
+        })
+        console.log("hi");   
+
+        
     </script>
 
 

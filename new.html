@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p id="demo"></p>
+
+    <button onclick="ChangeDate()">the time is</button>
+    <p id="demo1"></p>
     <script>
-        document.getElementById("demo").innerHTML = "hello world";
+        function ChangeDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+        const person = {
+            name : "navin",
+            age : 21,
+            loc : "kolar",
+            place : function() {
+                return this.loc;
+            }
+        };
+        document.getElementById("demo1").innerHTML = person.place();
+
     </script>
-    
+    <p id="demo"></p>
+
+
+
+
 </body>
+
 </html>
