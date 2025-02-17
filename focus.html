@@ -1,23 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Focus Event Example</title>
-</head>
+<html>
+
+<head> Fetch method </head>
+
 <body>
   <p id="demo"></p>
-
-  <input type ="button" onclick="geeks()" value="click here to change color"/>
   <script>
-    function geeks() {
-
-      let inst=document.getElementById("demo");
-      id.document.getElementById("demo").innerHTML = "Hello Geeks!";
+    function fetchJSONDATA() {
+      try {
+        fetch('./Sample.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => console.log(data))
+          .catch(error => console.log('Failed to fetch data:', error));
+      } catch (error) {
+        console.log('An error occurred:', error);
+      }
     }
+    fetchJSONDATA();
+      let file = "./sample.json"
+        fetch(file)
+          .then(x => x.text())
+          .then(y => document.getElementById("demo").innerHTML = y);
   </script>
-
-
-
- 
 </body>
+
 </html>

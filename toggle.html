@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="ThemeToggler">Switch to Dark</button>
+    <script>
+        let body = document.querySelector("body");
+        let ThemeToggler = document.getElementById("ThemeToggler");
+        ThemeToggler.addEventListener('click', switchToTheme)
+
+        function switchToTheme() {
+            let currentBgColor = body.style.backgroundColor;
+            if (currentBgColor == "white" || !currentBgColor) {
+                body.style.backgroundColor = "black";
+                ThemeToggler.textContent = "Switch to Light";
+            } else {
+                body.style.backgroundColor = "white";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
