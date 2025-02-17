@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>DOM querySelectorAll() Method</title>
+	<style>
+		#ab {
+			border: 1px solid black;
+			margin: 5px;
+		}
+	</style>
 </head>
+<<<<<<< HEAD
+=======
 <body>
    <p>"enter a number"</p>
    <button id="demo" >submit</button>
@@ -28,10 +35,28 @@
 
         
     </script>
+>>>>>>> a8e41282cd01c8dd711ad274017a5b5b68603409
 
+<body style="text-align: center;">
+	<h1 style="color: green;">nation</h1>
+	<h2>querySelectorAll() Method</h2>
+	<div id="ab">
+		<p>This is paragraph 1.</p>
+		<p>This is paragraph 2.</p>
+	</div>
+	<button onclick="myFunction()">Try it</button>
 
-
-
-    
+	<script>
+		function myFunction() {
+			let x = document.getElementById("ab")
+					.querySelectorAll("p");
+			let i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.backgroundColor = "green";
+				x[i].style.color = "white";
+			}
+		}
+	</script>
 </body>
+
 </html>
