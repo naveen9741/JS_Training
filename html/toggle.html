@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+
+        body.light {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="ThemeToggler">Switch to Dark</button>
+    <h1 id="heading">toggling themes</h1>
+    <script>
+        let body = document.querySelector("body");
+        let ThemeToggler = document.getElementById("ThemeToggler");
+        ThemeToggler.addEventListener('click', switchToTheme)
+
+        function switchToTheme() {
+            let isDarkMode = body.classList.contains("dark");
+            if (isDarkMode) {
+                body.classList.remove("dark");
+                body.classList.add("light");
+                ThemeToggler.textContent = "Switch to Dark";
+            } else {
+                body.classList.remove("light");
+                body.classList.add("dark");
+                ThemeToggler.textContent = "Switch to Light";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

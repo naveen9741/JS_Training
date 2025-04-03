@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="hover">mouse over</button>
+<p id="event"></p>
+<script>
+    const x = document.getElementById("hover");
+    const event = document.getElementById("event");
+    x.addEventListener("mouseover",RespondClick);
+
+    function RespondClick() {
+        let ele = document.createElement("div");
+        ele.textContent = "mouse over";
+        ele.classList.add("divtag","className","buttom");
+        ele.setAttribute("data_lable","mouse over");
+
+        let childEle = document.createElement("input");
+        childEle.type = "text";
+        childEle.placeholder = "Enter your name";
+        ele.appendChild(childEle);
+        
+
+        event.appendChild(ele);
+        
+    }
+    
+    x.addEventListener("click",RespondEnter) ;
+    function RespondEnter()
+     {
+        event.innerHTML = "";
+        
+    }
+
+</script>    
+</body>
+</html>

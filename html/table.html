@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0%;
+    }
+
+    .container {
+        height: 100vh;
+        padding: 20px;
+        border: 2px solid white;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+
+    .head {
+        height: 200px;
+        width: 100vw;
+        border:2px solid white;
+        
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        background-color: aqua;
+
+    }
+    .content{
+        display: flex;
+        border: 2px;
+        height: 500px;
+        padding: 5px;
+        gap: 20px;
+    }
+    .left-section div{
+        background-color: red;
+        border: 2px solid blue;
+        gap: 20px;
+
+    }
+    .left-section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        width: 100%;
+        margin-right: 10px;
+        padding: 20px;
+    }
+    .right-section{
+        width: 100%;
+        border: 200px;
+        background-color: blue;
+        padding: 20px;
+        gap: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="head">heading</div>
+        <div class="content">
+            <div class="left-section">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right-section"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

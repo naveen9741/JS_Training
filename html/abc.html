@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button id="Button1" onclick=myFunction()> click</button>
+<p id="para"></p>
+<body>
+    <script>
+    function myFunction('',()=>{
+
+    })
+    document.addEventListener('click',(e)=>{
+    let popup = document.getElementById("Button1");
+    if(!Button1) return;
+    let targetElement = e.target;
+    let isWithinPopupContainer = targetElement.closest("#Button1") || targetElement.closest("#para");
+    if(!isWithinPopupContainer){
+    pano.setVariableValue("Popup",false);
+    }
+    return;
+    })
+    </script>
+</body>
+</html>

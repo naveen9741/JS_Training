@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        CSS grid-area Property
+    </title>
+    <style>
+        .item {
+           display: grid;
+           grid-area: ;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-area: auto;
+            grid-gap: 30px;
+            background-color: green;
+            padding: 20px;
+        }
+
+        .GFG {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h2>The grid-area Property</h2>
+
+    <div class="GFG item"><img src="./brandLogo.png" alt="">
+        <div><img src="./clientlogo - copy.png" alt=""></div>
+    </div>
+    <div class="grid-container">
+
+        <div class="GFG">2</div>
+        <div class="GFG">3</div>
+        <div class="GFG">4</div>
+        <div class="GFG">5</div>
+        <div class="GFG">6</div>
+    </div>
+</body>
+
+</html>

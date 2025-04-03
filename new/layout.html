@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            gap: 20px;
+
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .header {
+            height: 20px;
+            width: 100vw;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            gap: 20px;
+            border-style: dashed;
+        }
+
+        .logo {
+            width: fit content;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .Note {
+            width: 500px;
+            height: 50px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .Note span:hover {
+            color: rgb(83, 35, 35);
+            font-size: 20px;
+
+
+        }
+
+        .Note span {
+            color: rgb(141, 41, 41);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+        .logo>span {
+            font-size: 20px;
+            color: rgb(17, 11, 11);
+        }
+
+
+        .header2 {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .header2 input {
+            border: 1px solid black;
+            width: 500px;
+            height: 50px;
+        }
+
+        .container {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: antiquewhite;
+        }
+
+        .container button {
+            background-color: rgb(245, 0, 0);
+            height: 20px;
+            width: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(104, 119, 116);
+
+        }
+
+        .banner img {
+            width: auto;
+            height: 100%;
+            margin-left: 20%;
+            position: relative;
+
+        }
+
+        .imge1 {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+
+
+
+
+        .image2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20PX;
+
+
+        }
+
+        .image2 div {
+            display: grid;
+            padding: 20px;
+            gap: 10px;
+            text-align: center;
+
+        }
+
+        .footer {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(0, 135, 245);
+            gap: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <span>Lan</span>
+            <span>Amt</span>
+            <span>Welcome</span>
+        </div>
+        <div class="Note">
+            <span>Home</span>
+            <Span>Contact</Span>
+            <Span>Help</Span>
+            <Span>Login</Span>
+            <Span>Events</Span>
+        </div>
+    </div>
+
+    <div class="header2">
+        <h1>AJIO</h1>
+        <input type="text" placeholder="Search for products, brands and more">
+        <h1>Add to Cart</h1>
+        <p>2 items</p>
+    </div>
+
+    <div class="container">
+        <form action="">
+            <label for="Gender">choose gender:
+
+            </label>
+            <select name="gender" id="gender">
+                <option value="AL">ALL CATEGORIES</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Home Products">Home Products</option>
+                <option value="Sports">Sports</option>
+                <option value="Others">Others</option>
+            </select>
+        </form>
+        <span>Customer Care 1234567890 /</span><span>Money back Guarntee</span><span>Free shopping World wide</span>
+
+
+        <button>Offer Zone</button>
+    </div>
+    <div class="banner"><img src="./images/Images/blog-img2.jpg" alt=""></div>
+    <div class="imge1">
+        <img src="./images/Images/custom-slide1.jpg" alt="">
+        <img src="./images/Images/custom-slide2.jpg" alt="">
+        <img src="./images/Images/custom-slide3.jpg" alt="">
+    </div>
+    <div class="image2">
+        <div><img src="./images/Images/member1.jpg" alt=""><span>img1 </span><span>1</span> <button>Add To Cart</button>
+        </div>
+        <div><img src="./images/Images/member2.jpg" alt=""><span>img2</span><span>1</span> <button>Add To Cart</button>
+        </div>
+        <div><img src="./images/Images/member3.jpg" alt=""><span>img3</span><span>1</span> <button>Add To Cart</button>
+        </div>
+        <div><img src="./images/Images/member4.jpg" alt=""><span>img4</span><span>1</span> <button>Add To Cart</button>
+        </div>
+    </div>
+    <hr>
+    <div class="footer"></div>
+
+
+</body>
+
+</html>

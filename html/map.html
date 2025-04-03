@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <div id="div1">
+        <h1 id="h11">hello</h1>
+        <h2 id="h22">world</h2>
+    </div>
+    <script>
+        if (!String.prototype.getMap) {
+            String.prototype.getMap = function(currentValue) {
+                debugger;
+                for (let i = 0; i < this.length; i++) {
+                    console.log(this[i]);
+                    currentValue = this[i];
+                }
+    
+                return this;
+            };
+        }
+
+        const heading = document.createElement("button");
+        const text = document.createTextNode("this is a javascript");
+        heading.appendChild(text);
+        const newelement = document.getElementById("div1");
+        newelement.appendChild(heading);
+        const element = document.getElementById("div1");
+        const child = document.getElementById("h11");
+        element.insertBefore(heading,child);
+
+
+
+        let element1 = "hello";
+        element1.getMap(currentValue)
+
+
+     
+        
+
+    </script>
+    
+</body>
+</html>

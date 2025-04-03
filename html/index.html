@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="event"></p>
+    <button id="dblclick">button double clicked</button>
+
+
+    <script>
+        const x = document.getElementById("dblclick");
+        x.addEventListener("dblclick",RespondClick);
+        function RespondClick() {
+            document.getElementById("event").innerHTML = Math.random();
+        }
+      
+    
+    </script>
+</body>
+</html>

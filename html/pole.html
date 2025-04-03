@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .ht_info_popup.active {
+    opacity: 1 !important;
+    }
+    
+    .ht_info_popup,
+    .ht_info_popup * {
+    pointer-events: none !important;
+    transition: all 0s linear !important;
+    }
+    
+    .ht_info_poly_container {
+    width: 10px !important;
+    height: 10px !important;
+    position: relative !important;
+    box-sizing: border-box;
+    background-color: #FFFFFF !important;
+    border-radius: 50%;
+    pointer-events: none !important;
+    }
+    
+    .ht_info_poly_container::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #FFFFFF !important;
+    animation: 1500ms linear 0s infinite anim_scalling_fade;
+    }
+    
+    .ht_info_poly_container::after {
+    --pole-height: 90px;
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: var(--pole-height);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    background-color: #FFFFFF;
+    animation: growdown 0.8s linear forwards;
+    }
+    
+    .ht_info_popup.inactive .ht_info_poly_container::after {
+    animation: growdown 0.4s linear forwards;
+    animation-delay: 0.4s;
+    }
+    
+    .ht_info_popup.active .ht_info_poly_container::after {
+    animation: growup 0.4s linear forwards;
+    }
+    
+    @keyframes growdown {
+    from {
+    height: var(--pole-height);
+    }
+    
+    to {
+    height: 0px;
+    }
+    }
+    
+    @keyframes growup {
+    0% {
+    height: 0px;
+    }
+    
+    100% {
+    height: var(--pole-height);
+    }
+    }
+    
+    @keyframes anim_scalling_fade {
+    0% {
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    }
+    
+    60% {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    }
+    
+    100% {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    }
+    }
+    
+    .ht_info_poly_container .icon {
+    top: auto !important;
+    left: auto !important;
+    right: 10px;
+    bottom: calc(100% + 50px) !important;
+    overflow: hidden;
+    }
+    
+    .ht_info_popup .ht_info_poly_container .icon img {
+    border-radius: 2px;
+    transform: translateX(100px);
+    }
+    
+    .ht_info_popup.active .ht_info_poly_container .icon img {
+    animation: growX 0.4s linear forwards;
+    animation-delay: 0.4s;
+    }
+    
+    .ht_info_popup.inactive .ht_info_poly_container .icon img {
+    animation: shrinkX 0.4s linear forwards;
+    }
+    
+    @keyframes growX {
+    from {
+    transform: translateX(100px);
+    }
+    
+    to {
+    transform: translateX(0px);
+    }
+    }
+    
+    @keyframes shrinkX {
+    from {
+    transform: translateX(0px);
+    }
+    
+    to {
+    transform: translateX(100px);
+    }
+    }
+    
+    .info_description {
+    box-sizing: border-box;
+    top: auto !important;
+    bottom: calc(100% + 50px) !important;
+    left: 10px !important;
+    background-color: transparent;
+    width: max-content !important;
+    height: 40px !important;
+    min-width: 100px;
+    pointer-events: none !important;
+    }
+    
+    .info_description > div {
+    position: relative !important;
+    width: auto;
+    height: 100% !important;
+    min-height: 40px;
+    background-color: #d5ba67 !important;
+    text-shadow: 0px 0px 0px #000;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    padding: 0 5px !important;
+    pointer-events: none !important;
+    opacity: 0;
+    overflow: hidden !important;
+    text-align: start !important;
+    border-radius: 2px;
+    }
+    
+    .ht_info_popup.active .info_description > div {
+    animation: growWidth 0.4s linear forwards;
+    animation-delay: 0.5s;
+    }
+    
+    .ht_info_popup.inactive .info_description > div {
+    animation: shrinkWidth 0.4s linear forwards;
+    animation-delay: 0s;
+    }
+    
+    @keyframes growWidth {
+    0% {
+    width: 0%;
+    opacity: 0;
+    }
+    
+    100% {
+    width: 100%;
+    opacity: 1;
+    /* border: 2px solid #d5ba67; */
+    }
+    }
+    
+    @keyframes shrinkWidth {
+    from {
+    width: 100%;
+    opacity: 1;
+    }
+    
+    to {
+    width: 0%;
+    opacity: 0;
+    }
+    }
+    
+    .info_description > div * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .info_description > div > p.line {
+    width: 100%;
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+    }
+    </style>
+</body>
+</html>

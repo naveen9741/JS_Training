@@ -1,0 +1,23 @@
+String
+Number
+Boolean
+Object
+Array
+
+var let const
+
+// variable declaration
+declarationKey variableName = value;
+
+// function declaration using "function"
+declarationKey functionName () {
+    .........
+}
+
+// arrow function declaration
+declarationKey functionName = () => {
+    .........
+}
+
+// arrow function declaration (for single expression)
+declarationKey functionName = () => console.log();

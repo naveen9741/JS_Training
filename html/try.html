@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>Create Element</title>
+
+<body>
+    <ul id="mylist">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <button onclick="myFunction()">add</button>
+    <script>
+        function myFunction () {
+
+        
+        const list = document.createElement("li");
+        const add = document.createTextNode("d");
+        list.appendChild(add);
+        document.getElementById("mylist").appendChild(list);
+    }
+    </script>
+
+</body>
+
+</html>

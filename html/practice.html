@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id = "container" style = background-color:lightblue;>
+    <p class="Example">hello</p>
+    <p class="Example">world</p>
+    <p class="Example">enter</p>
+    <p class="Example">into new</p>
+  </div>
+    <script>
+<<<<<<< HEAD
+        document.getElementById("mybutton").addEventListener('click',function()
+    {alert("hello world")});
+    console.log("hi")
+=======
+        const node = document.querySelectorAll(".Example");
+        for(let i = 0; i < node.length; i++) {
+            node[i].addEventListener("click",function(e) {
+                let ele = e.target;
+                e.target.style.backgroundColor = "red";
+                ele.style.border = "2px solid blue";
+            })
+            const box = document.getElementById("#container");
+            box.addEventListener("mousemove",function(e) {
+                e.target.style.backgroundColor = "green";
+            })
+        }
+
+
+>>>>>>> a8e41282cd01c8dd711ad274017a5b5b68603409
+    </script>
+</body>
+</html>

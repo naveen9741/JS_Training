@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Target Example</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button" id="button1">Button 1</button>
+    <button class="button" id="button2">Button 2</button>
+    <button class="button" id="button3">Button 3</button>
+
+    <script>
+        // Event listener on the document
+        document.addEventListener('mouseover', function (e) {
+            // Log the target of the event (the element that was clicked)
+            console.log('Clicked element:', e.target);
+
+            // Check if the clicked element is one of the buttons
+            if (e.target.classList.contains('button')) {
+                // Handle button clicks
+                console.log('You clicked a button with id:', e.target.id);
+                e.target.style.backgroundColor = 'lightgreen'; // Change button color on click
+            }
+        });
+        document.addEventListener('mousedblclick', function (e) {
+            console.log('dblckicked element:', e.target);
+            if (e.target.classList.contains('button')) {
+                console.log("dblclicked",e.target.id)
+                e.target.style.backgroundColor = 'blue';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS flex Property </title>
+    <style>
+        body {
+            box-sizing: border-box;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        h1 {
+            align-items: center;
+        }
+
+        #Geeks {
+            width: auto;
+            height: 500px;
+            border: 2px solid red;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+
+        }
+
+        .GFG1 {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid blue;
+            flex: 1;
+        }
+
+        .GFG2 {
+            background-color: transparent;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid blue;
+        }
+
+        .GFG3 {
+            background-color: transparent;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid blue;
+        }
+/* 
+        .Geeks2 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+            border: solid 2px orange;
+        } */
+
+        .Geeks2 div {
+            display: flex;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .Geeks2 > div:first-child {
+            border: 2px solid rgb(255, 0, 0);
+        }
+
+        .Geeks3 {
+            background-color: black;
+            width: auto;
+            height: 400px;
+            display: flex;
+            padding: 5px;
+            gap: 5px;
+            justify-content: space-evenly;
+        }
+
+        .Geeks3 div {
+            display: flex;
+            border: 1px;
+            gap: 5px;
+            padding: 1px;
+            margin: 1px;
+            width: max-content;
+            flex-direction: column;
+        }
+
+        .Geeks3 div h1 {
+            color: aqua;
+            justify-content: space-evenly;
+
+        }
+
+        .Geeks3 .para {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS flex Property</h2>
+    <div id="Geeks">
+        <div class="GFG1">
+
+            <img src="./brandLogo.png" alt="brandLogo">
+        </div>
+        <div class="GFG2">
+            <img src="./splashscreen.png" alt="brandLogo">
+        </div>
+        <div class="GFG3">
+            <img src="./splashscreen.png" alt="brandLogo">
+        </div>
+    </div>
+    <br>
+    <div class="Geeks2">
+        <div>
+        <div><img src="./clientlogo - copy.png" alt=""></div>       
+        <div><img src="./clientlogo - copy.png" alt=""></div>
+        <div><img src="./clientlogo - copy.png" alt=""></div>
+        <div><img src="./clientlogo - copy.png" alt=""></div>
+        </div>
+    </div> <br>
+    <div class="Geeks3">
+        <div>
+            <h1>First</h1>
+            <p class="para">This is about width of paragraph</p>
+        </div>
+        <div>
+            <h1>Second</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Third</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Fourth</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Fifth</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Sixth</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Seventh</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+        <div>
+            <h1>Eigth</h1>
+            <p class="para">This is about width of paragraph</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

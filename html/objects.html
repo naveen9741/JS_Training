@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<body>
+ 
+    <h1 id="car"></h1>
+    <script>
+        let car = {
+            company:"toyato",
+            price : 10000000
+        }
+        document.getElementById("car").innerHTML = car.company + "<br/>" + car.price;
+        document.getElementById("car").setAttribute("tag","p");   
+        document.getElementById("car").removeAttribute("tag");
+        document.getElementById("car").setAttribute("text","arjun prasad");
+        document.getElementById("car").getAttribute("text");
+   
+    </script>
+</body>
+</html>
